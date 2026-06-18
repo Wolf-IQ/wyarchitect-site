@@ -96,11 +96,15 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Contact CTA -->
-  <section class="section-padding bg-neutral-900 text-white text-center">
-    <div class="max-w-2xl mx-auto">
+  <section class="relative py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/10-newburgh-pl-1.jpg" alt="Architecture background" class="w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-neutral-900/75"></div>
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center px-6">
       <p class="text-xs tracking-[0.3em] uppercase text-amber-400 mb-4">Work With Us</p>
-      <h2 class="font-heading text-4xl md:text-5xl font-light mb-6">Let's Create Something Together</h2>
-      <p class="text-neutral-400 leading-relaxed mb-10">
+      <h2 class="font-heading text-4xl md:text-5xl text-white font-light mb-6">Let's Create Something Together</h2>
+      <p class="text-neutral-300 leading-relaxed mb-10">
         Contact us to discuss your project and find out how WY Architect can help bring your vision to life.
       </p>
       <a href="/contact/" class="inline-block px-8 py-3 bg-white text-neutral-900 text-sm tracking-widest uppercase hover:bg-neutral-100 transition-colors duration-200">

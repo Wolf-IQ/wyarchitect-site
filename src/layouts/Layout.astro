@@ -85,12 +85,14 @@ const currentPath = Astro.url.pathname;
           ))}
         </ul>
 
-        <!-- Desktop CTA -->
-        <a href="/contact/" class="hidden md:inline-block btn-primary text-xs py-2.5 px-6">
-          Enquire Now
-        </a>
+        <!-- Desktop CTA (hidden on mobile) -->
+        <div class="hidden md:block">
+          <a href="/contact/" class="btn-primary text-xs py-2.5 px-6">
+            Enquire Now
+          </a>
+        </div>
 
-        <!-- Mobile Menu Toggle -->
+        <!-- Mobile Menu Toggle (no Enquire Now button beside it on mobile) -->
         <button
           id="menu-toggle"
           class="md:hidden flex flex-col gap-1.5 p-2"
