@@ -1,0 +1,167 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Architectural Design Services Melbourne"
+  description="WY Architect — innovative and sustainable architectural design for residential, commercial, and institutional projects in Melbourne, Victoria."
+  canonical="https://www.wyarchitect.com.au/"
+>
+  <!-- Hero Section -->
+  <section class="relative h-screen min-h-[600px] flex items-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/55-57-brown-st-1.jpg"
+        alt="Contemporary residential architecture by WY Architect"
+        class="w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28 w-full">
+      <p class="text-xs tracking-[0.3em] uppercase text-neutral-300 mb-4">Melbourne, Victoria</p>
+      <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl text-white font-light leading-none mb-6 max-w-3xl">
+        Design That<br /><em>Inspires</em>
+      </h1>
+      <p class="text-neutral-200 text-base md:text-lg max-w-xl mb-10 leading-relaxed font-light">
+        Architectural services dedicated to bringing innovative and sustainable design solutions — from concept through to completion.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/projects/" class="btn-primary">View Projects</a>
+        <a href="/contact/" class="inline-block px-8 py-3 border border-white text-white text-sm tracking-widest uppercase hover:bg-white hover:text-neutral-900 transition-colors duration-200">
+          Enquire Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Intro -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">About WY Architect</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-light leading-tight mb-8">
+          Creativity, Functionality &amp; Efficiency
+        </h2>
+        <p class="text-neutral-600 leading-relaxed mb-6">
+          WY Architect is a provider of architectural services, dedicated to bringing innovative and sustainable design solutions to our clients. We are committed to delivering exceptional design concepts that align with our clients' vision and needs.
+        </p>
+        <p class="text-neutral-600 leading-relaxed mb-10">
+          With a focus on creativity, functionality, and efficiency, we work closely with our clients to create spaces that inspire and enhance the way people live and work. Our expertise spans across residential, commercial, and institutional projects.
+        </p>
+        <a href="/about/" class="btn-outline">Learn More</a>
+      </div>
+      <div class="relative">
+        <img
+          src="/images/49-johnson-st-1.jpg"
+          alt="Architectural design by WY Architect"
+          class="w-full h-[500px] object-cover"
+          loading="lazy"
+        />
+        <div class="absolute -bottom-6 -left-6 bg-neutral-900 text-white p-8 hidden lg:block">
+          <p class="font-heading text-3xl font-light">20+</p>
+          <p class="text-xs tracking-widest uppercase text-neutral-400 mt-1">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section-padding bg-neutral-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">What We Do</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-light">Our Services</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group bg-white overflow-hidden">
+          <div class="overflow-hidden h-64">
+            <img src="/images/1-amherst-rd-1.jpg" alt="Residential architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="p-8">
+            <h3 class="font-heading text-2xl font-light mb-3">Residential</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed mb-6">Custom design solutions for new homes, renovations, alterations, and additions — tailored to your vision, style, and budget.</p>
+            <a href="/services/" class="text-xs tracking-widest uppercase text-neutral-900 border-b border-neutral-900 pb-0.5 hover:text-amber-700 hover:border-amber-700 transition-colors">Learn More</a>
+          </div>
+        </div>
+        <div class="group bg-white overflow-hidden">
+          <div class="overflow-hidden h-64">
+            <img src="/images/240-high-st-1.jpg" alt="Commercial architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="p-8">
+            <h3 class="font-heading text-2xl font-light mb-3">Commercial</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed mb-6">Technologically advanced, feasible, and cost-effective design solutions for commercial projects across public and private sectors.</p>
+            <a href="/services/" class="text-xs tracking-widest uppercase text-neutral-900 border-b border-neutral-900 pb-0.5 hover:text-amber-700 hover:border-amber-700 transition-colors">Learn More</a>
+          </div>
+        </div>
+        <div class="group bg-white overflow-hidden">
+          <div class="overflow-hidden h-64">
+            <img src="/images/monash-parkville-1.jpg" alt="Institutional architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="p-8">
+            <h3 class="font-heading text-2xl font-light mb-3">Institutional</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed mb-6">Considered design for institutional projects, balancing functionality, sustainability, and the needs of the communities they serve.</p>
+            <a href="/services/" class="text-xs tracking-widest uppercase text-neutral-900 border-b border-neutral-900 pb-0.5 hover:text-amber-700 hover:border-amber-700 transition-colors">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Teaser -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+        <div>
+          <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Portfolio</p>
+          <h2 class="font-heading text-4xl md:text-5xl font-light">Selected Projects</h2>
+        </div>
+        <a href="/projects/" class="btn-outline mt-6 md:mt-0">View All Projects</a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/projects/" class="group block overflow-hidden relative">
+          <div class="overflow-hidden h-80">
+            <img src="/images/49-johnson-st-2.jpg" alt="49 Johnson Street" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+            <p class="text-white font-heading text-xl font-light">49 Johnson Street</p>
+            <p class="text-neutral-300 text-xs tracking-widest uppercase mt-1">Residential</p>
+          </div>
+        </a>
+        <a href="/projects/" class="group block overflow-hidden relative">
+          <div class="overflow-hidden h-80">
+            <img src="/images/55-57-brown-st-2.jpg" alt="55-57 Brown Street" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+            <p class="text-white font-heading text-xl font-light">55–57 Brown Street</p>
+            <p class="text-neutral-300 text-xs tracking-widest uppercase mt-1">Residential</p>
+          </div>
+        </a>
+        <a href="/projects/" class="group block overflow-hidden relative">
+          <div class="overflow-hidden h-80">
+            <img src="/images/326-settlement-rd-1.jpg" alt="326 Settlement Road" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+            <p class="text-white font-heading text-xl font-light">326 Settlement Road</p>
+            <p class="text-neutral-300 text-xs tracking-widest uppercase mt-1">Residential</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="relative py-28 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="/images/3-gold-court-front-we.jpg" alt="Architecture background" class="w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-neutral-900/75"></div>
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center px-6">
+      <p class="text-xs tracking-[0.3em] uppercase text-amber-400 mb-4">Get Started</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-white font-light mb-6">Ready to Begin Your Project?</h2>
+      <p class="text-neutral-300 leading-relaxed mb-10">Whether it's a new construction, renovation, or interior design, we are dedicated to exceeding your expectations. Contact us to discuss your vision.</p>
+      <a href="/contact/" class="inline-block px-8 py-3 bg-white text-neutral-900 text-sm tracking-widest uppercase hover:bg-neutral-100 transition-colors duration-200">Get in Touch</a>
+    </div>
+  </section>
+</Layout>

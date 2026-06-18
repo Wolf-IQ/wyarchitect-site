@@ -1,0 +1,209 @@
+---
+import '../styles/global.css';
+import schema from '../../public/schema.json';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'WY Architect — architectural services in Melbourne, Victoria. Residential, commercial, and institutional design solutions.',
+  canonical,
+  ogImage = '/images/55-57-brown-st-1.jpg',
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+
+const navLinks = [
+  { href: '/about/', label: 'About' },
+  { href: '/services/', label: 'Services' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/contact/', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | WY Architect</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${title} | WY Architect`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={`https://www.wyarchitect.com.au${ogImage}`} />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts: Cormorant Garamond + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+
+  <body class="bg-white text-neutral-900 antialiased">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-neutral-100">
+      <nav class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img
+            src="/images/logo.png"
+            alt="WY Architect"
+            class="h-12 w-auto"
+            loading="eager"
+          />
+        </a>
+
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex items-center gap-10">
+          {navLinks.map(link => (
+            <li>
+              <a
+                href={link.href}
+                class={`nav-link ${currentPath === link.href ? 'text-neutral-900 font-medium' : ''}`}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <!-- Desktop CTA -->
+        <a href="/contact/" class="hidden md:inline-block btn-primary text-xs py-2.5 px-6">
+          Enquire Now
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="menu-toggle"
+          class="md:hidden flex flex-col gap-1.5 p-2"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="block w-6 h-0.5 bg-neutral-900 transition-all" id="bar1"></span>
+          <span class="block w-6 h-0.5 bg-neutral-900 transition-all" id="bar2"></span>
+          <span class="block w-6 h-0.5 bg-neutral-900 transition-all" id="bar3"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-t border-neutral-100 px-6 py-6"
+      >
+        <ul class="flex flex-col gap-6">
+          {navLinks.map(link => (
+            <li>
+              <a href={link.href} class="nav-link text-base block">
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a href="/contact/" class="btn-primary text-xs py-2.5 px-6 block text-center">
+              Enquire Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-300 py-16 px-6 md:px-12">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Brand -->
+        <div>
+          <img src="/images/logo.png" alt="WY Architect" class="h-12 w-auto mb-4 brightness-0 invert" />
+          <p class="text-sm leading-relaxed text-neutral-400">
+            Architectural services dedicated to bringing innovative and sustainable design solutions to our clients.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-white text-xs tracking-widest uppercase mb-5 font-medium">Navigation</h3>
+          <ul class="flex flex-col gap-3">
+            {navLinks.map(link => (
+              <li>
+                <a href={link.href} class="text-sm text-neutral-400 hover:text-white transition-colors">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white text-xs tracking-widest uppercase mb-5 font-medium">Contact</h3>
+          <address class="not-italic flex flex-col gap-3 text-sm text-neutral-400">
+            <p>411/1101 Toorak Road<br />Camberwell VIC 3124</p>
+            <a href="tel:0422338619" class="hover:text-white transition-colors">0422 338 619</a>
+            <a href="mailto:admin@wyarchitect.com.au" class="hover:text-white transition-colors">admin@wyarchitect.com.au</a>
+          </address>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500">
+        <p>&copy; {new Date().getFullYear()} WY Architect. All rights reserved.</p>
+        <p>Melbourne, Victoria, Australia</p>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      const bar1 = document.getElementById('bar1');
+      const bar2 = document.getElementById('bar2');
+      const bar3 = document.getElementById('bar3');
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = menu?.classList.contains('hidden') === false;
+        if (isOpen) {
+          menu?.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          bar1?.classList.remove('rotate-45', 'translate-y-2');
+          bar2?.classList.remove('opacity-0');
+          bar3?.classList.remove('-rotate-45', '-translate-y-2');
+        } else {
+          menu?.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
+          bar1?.classList.add('rotate-45', 'translate-y-2');
+          bar2?.classList.add('opacity-0');
+          bar3?.classList.add('-rotate-45', '-translate-y-2');
+        }
+      });
+
+      // Close menu on nav link click
+      menu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+          toggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
+  </body>
+</html>

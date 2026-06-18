@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const wyaProjects = [
+  {
+    name: '27 Mossfield Drive — Dual Lot',
+    type: 'Residential',
+    images: [],
+    cover: '',
+    noPhoto: true,
+  },
+  {
+    name: '13 Fraser Street',
+    type: 'Residential',
+    images: [],
+    cover: '',
+    noPhoto: true,
+  },
+  {
+    name: '31 Station Road',
+    type: 'Residential',
+    images: [],
+    cover: '',
+    noPhoto: true,
+  },
+  {
+    name: '27 Mossfield Drive — Rooming House',
+    type: 'Residential',
+    images: [],
+    cover: '',
+    noPhoto: true,
+  },
+];
+
+const involvedProjects = [
+  {
+    name: '240 High Street',
+    type: 'Commercial',
+    role: 'Full Design Development',
+    cover: '/images/240-high-st-1.jpg',
+    images: ['/images/240-high-st-1.jpg', '/images/240-high-st-2.jpg', '/images/240-high-st-3.jpg', '/images/240-high-st-4.jpg'],
+  },
+  {
+    name: '1 Amherst Road',
+    type: 'Residential',
+    role: 'Full Working Drawings & Building Permit',
+    cover: '/images/1-amherst-rd-1.jpg',
+    images: ['/images/1-amherst-rd-1.jpg', '/images/1-amherst-rd-2.jpg', '/images/1-amherst-rd-site-1.jpg'],
+  },
+  {
+    name: '189 Rathmines Street',
+    type: 'Residential',
+    role: 'Full Working Drawings & Building Permit',
+    cover: '/images/189-rathmines-st-1.jpg',
+    images: ['/images/189-rathmines-st-1.jpg', '/images/189-rathmines-st-2.jpg', '/images/189-rathmines-st-3.jpg'],
+  },
+  {
+    name: '55–57 Brown Street',
+    type: 'Residential',
+    role: 'Full Working Drawings & Building Permit',
+    cover: '/images/55-57-brown-st-1.jpg',
+    images: ['/images/55-57-brown-st-1.jpg', '/images/55-57-brown-st-2.jpg', '/images/55-57-brown-st-3.jpg'],
+  },
+  {
+    name: '66 Nancarrow Drive',
+    type: 'Residential',
+    role: 'Full Working Drawings & Building Permit',
+    cover: '/images/66-nancarrow-drv-1.jpg',
+    images: ['/images/66-nancarrow-drv-1.jpg', '/images/66-nancarrow-drv-2.jpg'],
+  },
+  {
+    name: '10 Newburgh Place',
+    type: 'Residential',
+    role: 'Full Working Drawings, Building Permit & Contract Administration',
+    cover: '/images/10-newburgh-pl-1.jpg',
+    images: ['/images/10-newburgh-pl-1.jpg', '/images/10-newburgh-pl-2.jpg'],
+  },
+  {
+    name: '254 Bell Street, Heidelberg Heights',
+    type: 'Residential',
+    role: 'Full Working Drawings, Building Permit & Contract Administration',
+    cover: '/images/254-bell-st-1.jpg',
+    images: ['/images/254-bell-st-1.jpg', '/images/254-bell-st-2.jpg'],
+  },
+  {
+    name: '326 Settlement Road',
+    type: 'Residential',
+    role: 'Full Working Drawings, Building Permit & Contract Administration',
+    cover: '/images/326-settlement-rd-1.jpg',
+    images: ['/images/326-settlement-rd-1.jpg', '/images/326-settlement-rd-2.jpg', '/images/326-settlement-rd-3.jpg'],
+  },
+  {
+    name: '390 High Street, Northcote',
+    type: 'Residential',
+    role: 'Full Working Drawings, Building Permit & Contract Administration',
+    cover: '/images/390-high-st-northcote-1.jpg',
+    images: ['/images/390-high-st-northcote-1.jpg', '/images/390-high-st-northcote-2.jpg'],
+  },
+  {
+    name: '49 Johnson Street',
+    type: 'Residential',
+    role: 'Full Working Drawings, Building Permit & Contract Administration',
+    cover: '/images/49-johnson-st-1.jpg',
+    images: ['/images/49-johnson-st-1.jpg', '/images/49-johnson-st-2.jpg', '/images/49-johnson-st-3.jpg'],
+  },
+  {
+    name: 'Monash, Parkville',
+    type: 'Institutional',
+    role: 'Full Working Drawings, Building Permit & Contract Administration',
+    cover: '/images/monash-parkville-1.jpg',
+    images: ['/images/monash-parkville-1.jpg', '/images/monash-parkville-2.jpg'],
+  },
+  {
+    name: '8 Findon Street',
+    type: 'Residential',
+    role: 'Minor Design & Working Drawings',
+    cover: '/images/8-findon-st-1.jpg',
+    images: ['/images/8-findon-st-1.jpg', '/images/8-findon-st-2.jpg', '/images/8-findon-st-3.jpg'],
+  },
+  {
+    name: '3 Gold Court',
+    type: 'Residential',
+    role: 'Working Drawings & Contract Administration',
+    cover: '/images/3-gold-court-front-we.jpg',
+    images: ['/images/3-gold-court-front-be.jpg', '/images/3-gold-court-front-we.jpg', '/images/3-gold-court-construction-1.jpg', '/images/3-gold-court-construction-2.jpg'],
+  },
+];
+---
+
+<Layout
+  title="Projects"
+  description="View the project portfolio of WY Architect — residential, commercial, and institutional architectural projects in Melbourne, Victoria."
+  canonical="https://www.wyarchitect.com.au/projects/"
+>
+  <!-- Page Hero -->
+  <section class="relative pt-36 pb-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/3-gold-court-front-be.jpg"
+        alt="WY Architect Projects"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-neutral-900/70"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-amber-400 mb-4">Our Work</p>
+      <h1 class="font-heading text-5xl md:text-6xl text-white font-light">Project Gallery</h1>
+    </div>
+  </section>
+
+  <!-- WYA Own Projects -->
+  <section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">WY Architect Projects</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-light">Our Own Work</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {wyaProjects.map(project => (
+          <div class="group overflow-hidden bg-neutral-50">
+            {project.noPhoto ? (
+              <div class="h-72 bg-neutral-200 flex flex-col items-center justify-center text-neutral-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p class="text-xs tracking-widest uppercase">Photography Coming Soon</p>
+              </div>
+            ) : (
+              <div class="overflow-hidden h-72">
+                <img
+                  src={project.cover}
+                  alt={project.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            <div class="p-6">
+              <p class="text-xs tracking-widest uppercase text-amber-700 mb-1">{project.type}</p>
+              <h3 class="font-heading text-xl font-light">{project.name}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Involved Projects with Disclaimer -->
+  <section class="section-padding bg-neutral-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-8">
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Prior Experience</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-light mb-6">Projects I Was Involved In</h2>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer-box mb-10 max-w-3xl">
+          <p class="font-medium mb-1">Note on Prior Experience</p>
+          <p>
+            The projects shown below were completed during my time working with a previous architectural practice. I was involved in these projects in the capacity noted against each entry. These projects are presented to demonstrate the breadth of my professional experience and are not claimed as independent WY Architect commissions.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {involvedProjects.map(project => (
+          <div class="group overflow-hidden bg-white">
+            <div class="overflow-hidden h-56">
+              <img
+                src={project.cover}
+                alt={project.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5">
+              <p class="text-xs tracking-widest uppercase text-amber-700 mb-1">{project.type}</p>
+              <h3 class="font-heading text-lg font-light mb-2">{project.name}</h3>
+              <p class="text-xs text-neutral-500 italic">{project.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-neutral-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-xs tracking-[0.3em] uppercase text-amber-400 mb-4">Start Your Project</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-light mb-6">Have a Project in Mind?</h2>
+      <p class="text-neutral-400 leading-relaxed mb-10">
+        Contact us to discuss your architectural requirements and explore how WY Architect can help bring your vision to life.
+      </p>
+      <a href="/contact/" class="inline-block px-8 py-3 bg-white text-neutral-900 text-sm tracking-widest uppercase hover:bg-neutral-100 transition-colors duration-200">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+</Layout>

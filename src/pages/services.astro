@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Services"
+  description="WY Architect offers residential, commercial, and institutional architectural design services in Melbourne, Victoria. Custom design solutions tailored to your vision and budget."
+  canonical="https://www.wyarchitect.com.au/services/"
+>
+  <!-- Page Hero -->
+  <section class="relative pt-36 pb-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/1-amherst-rd-2.jpg"
+        alt="WY Architect Services"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-neutral-900/70"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+      <p class="text-xs tracking-[0.3em] uppercase text-amber-400 mb-4">What We Offer</p>
+      <h1 class="font-heading text-5xl md:text-6xl text-white font-light">Our Services</h1>
+    </div>
+  </section>
+
+  <!-- Services Intro -->
+  <section class="section-padding bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Design Solutions</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-light leading-tight mb-6">
+        Tailored to Your Vision
+      </h2>
+      <p class="text-neutral-600 leading-relaxed">
+        We offer personalised design solutions tailored to your specific needs and preferences, ensuring that your project reflects your unique vision, style, and budget. Our expertise spans residential, commercial, and institutional projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Residential -->
+  <section class="section-padding bg-neutral-50" id="residential">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1">
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Service 01</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-light leading-tight mb-6">
+          Residential Architecture
+        </h2>
+        <p class="text-neutral-600 leading-relaxed mb-6">
+          We specialise in customised residential dwellings for both high-end and mainstream markets. Our focus is on achieving the client's brief whilst delivering well-designed solutions that cater to the needs and requirements of individual clients.
+        </p>
+        <p class="text-neutral-600 leading-relaxed mb-8">
+          Our customised approach can be tailored to your tastes — we design within contemporary, classical, and period styles. Using specialised 3D design software, we assist clients in visualising their customised design from conception through to finalisation.
+        </p>
+        <ul class="space-y-3 mb-10">
+          {[
+            'New residential dwellings',
+            'Alterations and additions',
+            'Renovations and extensions',
+            'Multi-residential developments',
+            'Dual occupancy projects',
+          ].map(item => (
+            <li class="flex items-center gap-3 text-sm text-neutral-700">
+              <span class="w-1.5 h-1.5 bg-amber-700 rounded-full flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <a href="/contact/" class="btn-primary">Enquire About Residential</a>
+      </div>
+      <div class="order-1 lg:order-2">
+        <img
+          src="/images/189-rathmines-st-1.jpg"
+          alt="Residential architecture by WY Architect"
+          class="w-full h-[500px] object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial -->
+  <section class="section-padding bg-white" id="commercial">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <img
+          src="/images/240-high-st-2.jpg"
+          alt="Commercial architecture by WY Architect"
+          class="w-full h-[500px] object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Service 02</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-light leading-tight mb-6">
+          Commercial Architecture
+        </h2>
+        <p class="text-neutral-600 leading-relaxed mb-6">
+          We specialise in customised commercial projects for both public and private sectors. Our focus is on providing technologically advanced, feasible, and cost-effective design solutions that cater to various commercial uses.
+        </p>
+        <ul class="space-y-3 mb-10">
+          {[
+            'Warehouse developments',
+            'Retail fitouts',
+            'Office fitouts',
+            'Factory extensions',
+            'Storage facilities',
+          ].map(item => (
+            <li class="flex items-center gap-3 text-sm text-neutral-700">
+              <span class="w-1.5 h-1.5 bg-amber-700 rounded-full flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <a href="/contact/" class="btn-primary">Enquire About Commercial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Institutional -->
+  <section class="section-padding bg-neutral-50" id="institutional">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1">
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Service 03</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-light leading-tight mb-6">
+          Institutional Architecture
+        </h2>
+        <p class="text-neutral-600 leading-relaxed mb-6">
+          We bring considered design to institutional projects, balancing functionality, sustainability, and the needs of the communities they serve. Our approach ensures that institutional spaces are both practical and inspiring.
+        </p>
+        <ul class="space-y-3 mb-10">
+          {[
+            'Educational facilities',
+            'Community buildings',
+            'Mixed-use developments',
+            'Sustainable institutional design',
+          ].map(item => (
+            <li class="flex items-center gap-3 text-sm text-neutral-700">
+              <span class="w-1.5 h-1.5 bg-amber-700 rounded-full flex-shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <a href="/contact/" class="btn-primary">Enquire About Institutional</a>
+      </div>
+      <div class="order-1 lg:order-2">
+        <img
+          src="/images/monash-parkville-2.jpg"
+          alt="Institutional architecture by WY Architect"
+          class="w-full h-[500px] object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section-padding bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.3em] uppercase text-amber-400 mb-4">How We Work</p>
+        <h2 class="font-heading text-4xl md:text-5xl font-light">Our Design Process</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          { step: '01', title: 'Brief & Consultation', desc: 'We begin by understanding your vision, requirements, and budget through detailed consultation.' },
+          { step: '02', title: 'Concept Design', desc: 'We develop initial design concepts and use 3D visualisation tools to help you see your project come to life.' },
+          { step: '03', title: 'Design Development', desc: 'Concepts are refined and developed into detailed design documentation ready for approvals.' },
+          { step: '04', title: 'Documentation & Delivery', desc: 'We prepare complete construction documentation and support you through the approvals and construction process.' },
+        ].map(item => (
+          <div class="border-t border-neutral-700 pt-8">
+            <p class="font-heading text-4xl text-amber-400 font-light mb-4">{item.step}</p>
+            <h3 class="text-white font-medium mb-3">{item.title}</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Ready to Start?</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-light mb-6">Discuss Your Project</h2>
+      <p class="text-neutral-600 leading-relaxed mb-10">
+        Contact us for more information about our services or to arrange an initial consultation.
+      </p>
+      <a href="/contact/" class="btn-primary">Contact Us</a>
+    </div>
+  </section>
+</Layout>

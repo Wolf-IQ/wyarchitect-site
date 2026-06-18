@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact"
+  description="Contact WY Architect — 411/1101 Toorak Road, Camberwell VIC 3124. Phone: 0422 338 619. Email: admin@wyarchitect.com.au"
+  canonical="https://www.wyarchitect.com.au/contact/"
+>
+  <!-- Contact Content (no dark hero — starts below nav) -->
+  <div style="padding-top: calc(5rem + 88px);">
+
+    <!-- Contact Header -->
+    <section class="bg-white px-6 md:px-12 pb-12 max-w-7xl mx-auto">
+      <p class="text-xs tracking-[0.3em] uppercase text-amber-700 mb-4">Reach Out</p>
+      <h1 class="font-heading text-5xl md:text-6xl font-light mb-4">Get in Touch</h1>
+      <p class="text-neutral-600 max-w-xl leading-relaxed">
+        We'd love to hear about your project. Fill in the form below or reach us directly by phone or email.
+      </p>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="px-6 md:px-12 pb-20 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-2">
+          <h2 class="font-heading text-2xl font-light mb-8">Send an Enquiry</h2>
+
+          <form
+            action="https://formspree.io/f/xaqzzzpv"
+            method="POST"
+            class="space-y-6"
+          >
+            <input type="hidden" name="_subject" value="New WY Architect Enquiry" />
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-xs tracking-widest uppercase text-neutral-700 mb-2">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:border-neutral-900 transition-colors"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-xs tracking-widest uppercase text-neutral-700 mb-2">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:border-neutral-900 transition-colors"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="block text-xs tracking-widest uppercase text-neutral-700 mb-2">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:border-neutral-900 transition-colors"
+                  placeholder="04xx xxx xxx"
+                />
+              </div>
+              <div>
+                <label for="service" class="block text-xs tracking-widest uppercase text-neutral-700 mb-2">Service Type</label>
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:border-neutral-900 transition-colors bg-white"
+                >
+                  <option value="">Select a service</option>
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="institutional">Institutional</option>
+                  <option value="other">Other / Not sure</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs tracking-widest uppercase text-neutral-700 mb-2">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="6"
+                class="w-full border border-neutral-300 px-4 py-3 text-sm focus:outline-none focus:border-neutral-900 transition-colors resize-none"
+                placeholder="Tell us about your project..."
+              ></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="privacy" name="privacy" required class="mt-1 flex-shrink-0" />
+              <label for="privacy" class="text-xs text-neutral-600 leading-relaxed">
+                I have read and understand the privacy policy and consent to WY Architect using my information to respond to this enquiry.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="btn-primary w-full md:w-auto"
+            >
+              Send Enquiry
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h2 class="font-heading text-2xl font-light mb-8">Contact Details</h2>
+          <div class="space-y-8">
+            <div>
+              <p class="text-xs tracking-widest uppercase text-neutral-500 mb-2">Address</p>
+              <address class="not-italic text-neutral-700 leading-relaxed">
+                411/1101 Toorak Road<br />
+                Camberwell VIC 3124<br />
+                Australia
+              </address>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=411%2F1101+Toorak+Road+Camberwell+VIC+3124"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs tracking-widest uppercase text-amber-700 hover:text-amber-900 transition-colors mt-2 inline-block border-b border-amber-700"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+
+            <div>
+              <p class="text-xs tracking-widest uppercase text-neutral-500 mb-2">Phone</p>
+              <a href="tel:0422338619" class="text-neutral-700 hover:text-neutral-900 transition-colors">
+                0422 338 619
+              </a>
+            </div>
+
+            <div>
+              <p class="text-xs tracking-widest uppercase text-neutral-500 mb-2">Email</p>
+              <a href="mailto:admin@wyarchitect.com.au" class="text-neutral-700 hover:text-neutral-900 transition-colors break-all">
+                admin@wyarchitect.com.au
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="w-full h-96">
+      <iframe
+        title="WY Architect location — 411/1101 Toorak Road, Camberwell VIC 3124"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.6!2d145.0637!3d-37.8398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66b2c5f3e7e4d%3A0x1!2s1101+Toorak+Rd%2C+Camberwell+VIC+3124!5e0!3m2!1sen!2sau!4v1718000000000!5m2!1sen!2sau"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+  </div>
+</Layout>
