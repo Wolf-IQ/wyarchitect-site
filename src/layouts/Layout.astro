@@ -20,7 +20,6 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
 
 const navLinks = [
   { href: '/about/', label: 'About' },
-  { href: '/services/', label: 'Services' },
   { href: '/projects/', label: 'Projects' },
   { href: '/contact/', label: 'Contact' },
 ];
@@ -84,13 +83,6 @@ const currentPath = Astro.url.pathname;
             </li>
           ))}
         </ul>
-
-        <!-- Desktop CTA (hidden on mobile) -->
-        <div class="hidden md:block">
-          <a href="/contact/" class="btn-primary text-xs py-2.5 px-6">
-            Enquire Now
-          </a>
-        </div>
 
         <!-- Mobile Menu Toggle (no Enquire Now button beside it on mobile) -->
         <button
